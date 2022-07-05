@@ -8,17 +8,25 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
+
+/* Header */
+
 nav {
     background: white;
     height: 85px;
     width: 100%;
 }
-label.logo{
-color: #ffa621;
-font-size: 35px;
-line-height: 85px;
-padding: 0 50px;
-font-weight: 700;
+a.logo{
+    color: #ffa621;
+    font-size: 35px;
+    line-height: 85px;
+    padding: 0 50px;
+    font-weight: 700;
+    transition: 1.25s;
+}
+a.logo:hover{
+    font-size: 38px;
+    transition: 1.25s;
 }
 nav ul{
     float: right;
@@ -37,7 +45,7 @@ nav ul li a{
     font-weight: 500;
     text-transform: uppercase;
 }
-a.active, a:hover{
+a.active, li.navtab a:hover{
     background: #ffa621;
     color:white;
     transition: 0.25s;
