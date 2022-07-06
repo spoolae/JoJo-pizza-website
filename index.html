@@ -7,6 +7,8 @@
 
     <title>Jojo Pizza</title>
 
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -16,25 +18,48 @@
 
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <nav>
-      <input type="checkbox" id="check" />
-      <label for="check" class="checkbtn">
-        <i data-feather="menu"></i>
-      </label>
-      <a href="#" class="logo">JOJO PIZZA</a>
-      <ul>
-        <li class="navtab"><a href="#">Home</a></li>
-        <li class="navtab"><a href="#">Menu</a></li>
-        <li class="navtab"><a href="#">Novelty by Chef</a></li>
-        <li class="navtab"><a href="#">Our restaraunts</a></li>
-        <li class="navtab"><a href="#">About Jojo's</a></li>
-      </ul>
-    </nav>
 
+  <body>
+    <section>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i data-feather="menu"></i>
+        </label>
+        <a href="#" class="logo">JOJO PIZZA</a>
+        <ul>
+          <li class="navtab"><a href="#">Home</a></li>
+          <li class="navtab"><a href="#">Menu</a></li>
+          <li class="navtab"><a href="#">Novelty by Chef</a></li>
+          <li class="navtab"><a href="#">Our restaraunts</a></li>
+          <li class="navtab"><a href="#">About Jojo's</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="banner">
+      <div class="row">
+        <div class="col-1">
+          <h2>Pizza<br />Margarita</h2>
+          <h3>Our new <label id="text-red">bestseller!<label></h3>
+          <p>(tomatoes, mozzarella, bazil)</p>
+          <h4>$4.50</h4>
+          <button type="button">
+            Add to Cart <img data-feather="arrow-right" />
+          </button>
+        </div>
+        <div class="col-2">
+          <img src="img/pizza-top-view-1.png" class="pizza" />
+          <div class="color-box"></div>
+          <div class="add-btn">
+            <i data-feather="plus"></i>
+            <p><small>Go to Novelties</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+   
     <script>
       feather.replace();
     </script>
   </body>
 </html>
- 
