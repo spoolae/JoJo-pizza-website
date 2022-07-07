@@ -286,3 +286,38 @@ a.active, li.navtab a:hover{
         width: 45%;
     }
 }
+
+/* Footer */
+
+.footer{
+    background: #1c1c1c;
+    padding: 25px 0;
+    text-align: center;
+    color: inherit;
+   
+}
+.footer .social svg{
+    color: white;
+    margin: 15px 20px;
+}
+.footer .social svg:hover{
+    color: #ffad33;
+}
+.footer a{
+    color: white;
+    font-size: 18px;
+}
+.footer p{
+    margin-top: 18px;
+    color: white;
+    font-size: 16px;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 15px 25px;
+    transition: all 0.25s;
+}
+.footer ul li:hover{
+    padding: 15px 35px;
+    transition: all 0.25s;
+}
