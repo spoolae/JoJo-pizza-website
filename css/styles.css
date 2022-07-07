@@ -97,12 +97,12 @@ a.active, li.navtab a:hover{
     }
 }
 @media (max-width: 905px){
-    .checkbtn{
+    .header .checkbtn{
         display: block;
         margin: 0 15px;
         line-height: 85px;
     }
-    ul{
+    .header ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -113,17 +113,17 @@ a.active, li.navtab a:hover{
         transition: all .25s;
         z-index: 99;
     }
-    nav ul li{
+    .header nav ul li{
         display: block;
     }
-    nav ul li a{
+    .header nav ul li a{
         font-size: 20px;
     }
-    a.active, li.navtab a:hover{
+    .header .active, li.navtab a:hover{
         background: none;
         color: #ffa621;
     }
-    #check:checked ~ ul{
+    .header #check:checked ~ ul{
         left: 0;
         z-index: 99;
     }
@@ -320,4 +320,20 @@ a.active, li.navtab a:hover{
 .footer ul li:hover{
     padding: 15px 35px;
     transition: all 0.25s;
+}
+
+@media (max-width: 905px){
+    .footer a{
+        font-size: 16px;
+    }
+    .footer a:hover{
+        font-size: 16px;
+        color:#ffad33;
+    }
+    .footer ul li{
+        padding: 15px 10px;
+    }
+    .footer ul li:hover{
+        padding: 15px 10px; 
+    }
 }
