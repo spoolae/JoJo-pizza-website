@@ -66,7 +66,7 @@ a.active, li.navtab a:hover{
     display: none;
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1105px){
     label.logo {
         line-height: 85px;
         padding-right: 20px;
@@ -129,6 +129,100 @@ a.active, li.navtab a:hover{
     }
 }
 
+/* Language Selection */
+
+.language-selection{
+    margin-top: 105px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.language-selection .get-it-on-playmarket img{
+    height: 50px;
+    cursor: pointer;
+}
+.language-selection .dropdown{
+    position: relative;
+    width: 250px;
+    height: 50px;
+}
+.language-selection .dropdown::before{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 2;
+    width: 8px;
+    height: 8px;
+    border: 2px solid black;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    transition: 0.25s;
+    pointer-events: none;
+}
+.language-selection .dropdown.active::before{
+    top: 22px;
+    transform: rotate(-225deg);
+}
+.language-selection .dropdown input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgb(0,0,0,0.05);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: black;
+    background: white;
+}
+.language-selection .dropdown .option{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    box-shadow: 0 30px 30px rgb(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 2;
+    background: white;
+}
+.language-selection .dropdown.active .option{
+    display: block;
+}
+.language-selection .dropdown .option div{
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.language-selection .dropdown .option div:hover{
+    background: #ff8b2b;
+    color: white;
+}
+.language-selection .dropdown .option img{
+    position: relative;
+    margin-right: 4px;
+    width: 18px;
+    border-radius: 2px;
+}
+
+@media (max-width: 905px){
+    .language-selection .dropdown{
+       width: 200px;
+    }
+    .language-selection{
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+}
+
 /* Banner */
 
 .banner #text-red{
@@ -138,7 +232,7 @@ a.active, li.navtab a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 185px;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 .banner .col-1{
@@ -255,9 +349,9 @@ a.active, li.navtab a:hover{
 @media (max-width: 905px){
     .banner .row{
         flex-direction: column-reverse;
-        margin-top: 135px;
         margin-bottom: 50px;
         margin-left: 45px;
+        margin-top: 35px;
     }
     .banner .col-1{
        margin-left: 15px;
@@ -437,6 +531,7 @@ a.active, li.navtab a:hover{
 
 @media (max-width: 905px){
     .about .slider{
-        width: 85%
+        width: 100%;
+        border-radius: 0;
     }
 }
