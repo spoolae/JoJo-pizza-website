@@ -26,11 +26,6 @@ a.logo{
     line-height: 85px;
     padding: 0 50px;
     font-weight: 700;
-    transition: .75s;
-}
-a.logo:hover{
-    font-size: 38px;
-    transition: .75s;
 }
 nav ul{
     float: right;
@@ -216,10 +211,61 @@ a.active, li.navtab a:hover{
 @media (max-width: 905px){
     .language-selection .dropdown{
        width: 200px;
+       margin-left: 15px;
     }
     .language-selection{
         margin-left: 35px;
         margin-right: 35px;
+    }
+}
+
+/* Categories */
+
+.categories .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 80px 70px 80px;
+}
+.categories img{
+    width: 14vw;
+    height: 14vw;
+    object-fit: cover;
+    min-width: 100px;
+    transition: all 0.25s;
+}
+.categories .tooltip{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    opacity:0;
+    pointer-events: none;
+}
+.categories a:hover img{
+    transform: translateY(5px);
+    transition: all 0.25s;
+}
+.categories a:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+}
+@media (max-width: 905px){
+    .categories .items{
+        display: block;
+        text-align: center;
+    }
+    .categories img{
+        width: 30vw;
+        height: 30vw;
+        min-width: 150px;
+        min-height: 150px;
+    }
+    .categories .tooltip{
+        opacity: 1;
+        font-size: 17px;
+        margin-bottom: 15px;
     }
 }
 
@@ -305,10 +351,6 @@ a.active, li.navtab a:hover{
 .banner .col-2 img{
     transition: all 1s;
 }
-.banner .col-2 img:hover{
-    transform: rotate(20deg);
-    transition: all 1s;
-}
 .banner .col-2 .color-box{
     position: absolute;
     right: 0;
@@ -359,18 +401,18 @@ a.active, li.navtab a:hover{
     .banner .col-1 h2{
         font-size: 48px;
         line-height: 48px;
-     }
+    }
      .banner .col-1 h3{
         font-size: 26px;
         margin: 10px 0 10px;
-     }
-     .banner .col-1 p{
-         font-size: 14px;
-     }
-     .banner .col-1 h4{
-         font-size: 24px;
-         margin: 24px 0; 
-     }
+    }
+    .banner .col-1 p{
+        font-size: 14px;
+    }
+    .banner .col-1 h4{
+        font-size: 24px;
+        margin: 24px 0; 
+    }
     .banner .col-2{
        flex-basis: 100%;
        margin-bottom: 50px; 
@@ -411,18 +453,13 @@ a.active, li.navtab a:hover{
     padding: 15px 25px;
     transition: all 0.25s;
 }
-.footer ul li:hover{
-    padding: 15px 35px;
-    transition: all 0.25s;
+.footer a:hover{
+    color:#ffad33;
 }
 
 @media (max-width: 905px){
     .footer a{
         font-size: 16px;
-    }
-    .footer a:hover{
-        font-size: 16px;
-        color:#ffad33;
     }
     .footer ul li{
         padding: 15px 10px;
