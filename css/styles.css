@@ -225,12 +225,13 @@ a.active, li.navtab a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 80px 70px 80px;
+    margin: 20px 80px 70px 80px;
 }
 .categories img{
     width: 14vw;
-    height: 14vw;
-    object-fit: cover;
+    height: 11vw;
+    /* padding: 25px; */
+    object-fit:contain;
     min-width: 100px;
     transition: all 0.25s;
 }
@@ -570,5 +571,65 @@ a.active, li.navtab a:hover{
     .about .slider{
         width: 100%;
         border-radius: 0;
+    }
+}
+
+/* Restaurants */
+
+.restaurants{
+    padding: 75px 0 35px 0;
+    background: #1a1a1a;
+}
+.restaurants .block{
+    text-align: center;
+    margin-top: 75px;
+}
+.restaurants h2{
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 25px 0;
+}
+.restaurants h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+.restaurants iframe{
+    width: 60%;
+    border-radius: 25px;
+}
+.restaurants .columns{
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    color: rgb(185, 185, 185);
+    font-size: 16px;
+    font-weight: 400;
+}
+.restaurants svg{
+    color:#ffa621;
+    height: 16px;
+    width: 16px;
+}
+.restaurants .rating:hover{
+    color:#ffa621;
+    cursor: pointer;
+}
+@media (max-width: 905px){
+    .restaurants iframe{
+        width: 100%;
+        border-radius: 0;
+    }
+    .restaurants .columns{
+        width: 100%;
+        flex-direction: column;
+    }
+    .restaurants .columns div{
+       margin: 5px;
     }
 }
