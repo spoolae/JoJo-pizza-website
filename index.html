@@ -50,20 +50,20 @@
     </section>
     <section class="categories">
       <div class="items">
-        <a href="#">
+        <a href="index-menu.html#pizza">
           <img src="img/ctg-pizza.png"/>
           <div class="tooltip">Pizza</div>
         </a>
-        <a href="#">
+        <a href="index-menu.html#chicken">
           <img src="img/ctg-chicken.png"/>
           <div class="tooltip">Chicken</div></a>
-        <a href="#">
+        <a href="index-menu.html#burgers">
           <img src="img/ctg-burger.png"/>
           <div class="tooltip">Burgers</div></a>
-        <a href="#">
+        <a href="index-menu.html#breakfast">
           <img src="img/ctg-breakfast.png"/>
           <div class="tooltip">Breakfast</div></a>
-        <a href="#">
+        <a href="index-menu.html#drinks">
           <img src="img/ctg-drinks.png"/>
           <div class="tooltip">Drinks</div></a>
       </div>
@@ -126,6 +126,15 @@
     </section>
     <script>
       feather.replace();
+    </script>
+    <script>
+      function show(anything){
+        document.querySelector('.textBox'). value = anything;
+      }
+      let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function(){
+          dropdown.classList.toggle('active');
+      }
     </script>
     <script src="js/main.js"></script>
   </body>

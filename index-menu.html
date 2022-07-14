@@ -149,7 +149,7 @@
         </div>
         <div class="item">
           <img src="img/burger-2.png" />
-          <h3>Chef's hamburger</h3>
+          <h3>Chef's Hamburger</h3>
           <p>Marble beef, onions, jalopeno...</p>
           <div class="row">
             <h3>$11.50</h3>
@@ -239,6 +239,20 @@
     </section>
     <script>
       feather.replace();
+    </script>
+    <script>
+      let menuNavbar = document.querySelector(".menu .menu-categories");
+      let category = document.querySelectorAll(".menu .category");
+      let menuNavbarHeight = document.querySelector(
+        ".menu .menu-categories"
+      ).clientHeight;
+      let navbarHeight = document.querySelector(".header nav").clientHeight;
+      let bannerHeight = document.querySelector(".menu-banner").clientHeight;
+      window.onscroll = function () {
+        if (window.scrollY > navbarHeight + bannerHeight - menuNavbarHeight)
+          menuNavbar.classList.add("sticky");
+        else menuNavbar.classList.remove("sticky");
+      };
     </script>
     <script src="js/main.js"></script>
   </body>
