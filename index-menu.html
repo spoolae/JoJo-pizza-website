@@ -242,16 +242,27 @@
     </script>
     <script>
       let menuNavbar = document.querySelector(".menu .menu-categories");
-      let category = document.querySelectorAll(".menu .category");
       let menuNavbarHeight = document.querySelector(
         ".menu .menu-categories"
       ).clientHeight;
       let navbarHeight = document.querySelector(".header nav").clientHeight;
       let bannerHeight = document.querySelector(".menu-banner").clientHeight;
+      let category = document.querySelectorAll(".menu div.category");
       window.onscroll = function () {
-        if (window.scrollY > navbarHeight + bannerHeight - menuNavbarHeight)
+        if (
+          window.scrollY >
+          navbarHeight + bannerHeight - menuNavbarHeight - 14
+        ) {
           menuNavbar.classList.add("sticky");
-        else menuNavbar.classList.remove("sticky");
+          for (let i = 0; i < category.length; i++) {
+            category[i].classList.add("offset");
+          }
+        } else {
+          menuNavbar.classList.remove("sticky");
+          for (let i = 0; i < category.length; i++) {
+            category[i].classList.remove("offset");
+          }
+        }
       };
     </script>
     <script src="js/main.js"></script>

@@ -775,16 +775,15 @@ section.menu{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding: 15px;
+    padding: 15px 25px;
     background: #ffa621; 
 }
 .menu .menu-categories.sticky{
     position: fixed;
-    top: 34px;
-    transform: translateY(50px);
+    top: 85px;
     width: 100%;
     transition: all 0.25s;
-    padding: 8px;
+    padding: 5px 25px;
 }
 .menu .menu-categories a{
     text-transform: uppercase;
@@ -805,6 +804,9 @@ section.menu{
     margin: 25px auto;
     display: flex;
     flex-wrap: wrap;
+    scroll-margin-top: 210px;
+}
+.menu .category.offset{
     scroll-margin-top: 140px;
 }
 .menu .category h2{
@@ -878,8 +880,9 @@ section.menu{
 
 @media (max-width: 905px){
     .menu .menu-categories{
-        flex-wrap: wrap;
-        justify-items: left;
+        overflow-x: scroll;
+        justify-content: flex-start;
+       
     }
     .menu .menu-categories a{
         font-size: 16px;
